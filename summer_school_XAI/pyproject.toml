@@ -1,0 +1,33 @@
+[project]
+name = "project-name"
+version = "0.1.0"
+authors = []
+requires-python = ">=3.11"
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = [
+    "torch>=2.4.0",
+    "lightning>=2.4.0",
+    "rationai-mlkit @ git+https://gitlab.ics.muni.cz/rationai/digital-pathology/libraries/mlkit.git",
+]
+
+[tool.pdm.dev-dependencies]
+dev = ["mypy", "pre-commit", "ruff"]
+
+[tool.pdm.scripts]
+train = "python -m project_name.main mode=fit"
+validate = "python -m project_name.main mode=validate"
+test = "python -m project_name.main mode=test"
+predict = "python -m project_name.main mode=predict"
+l = { composite = ["lint", "format", "mypy"] }
+lint = "ruff check --fix"
+format = "ruff format"
+mypy = "mypy ."
+post_install = { composite = [
+    "pre-commit autoupdate",
+    "pre-commit install",
+    "pre-commit install --hook-type commit-msg",
+] }
+
+[tool.pdm]
+distribution = false
