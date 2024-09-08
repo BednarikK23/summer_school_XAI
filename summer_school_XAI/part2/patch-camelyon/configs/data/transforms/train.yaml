@@ -1,0 +1,16 @@
+_target_: albumentations.Compose
+transforms:
+  - _target_: albumentations.RandomRotate90
+    p: 1.0
+  - _target_: albumentations.Flip
+    p: 0.75
+  - _target_: albumentations.RandomGamma
+    p: 0.5
+  - _target_: albumentations.RandomBrightnessContrast
+    p: 0.5
+  - _target_: albumentations.HueSaturationValue
+    p: 0.5
+  - _target_: albumentations.Normalize
+    mean: [178.69278045, 137.28123996, 176.36324185]
+    std: [59.91942025, 70.73932419, 54.28812066]
+    max_pixel_value: 1

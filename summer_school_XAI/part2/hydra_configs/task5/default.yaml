@@ -1,0 +1,10 @@
+defaults:
+  - base
+  - /data/datasets@data.train: cityscapes
+  - /data/transforms@data.train.transforms: train
+  - /model/backbone: ???
+  - _self_
+
+data:
+  train:
+    path: /some/data

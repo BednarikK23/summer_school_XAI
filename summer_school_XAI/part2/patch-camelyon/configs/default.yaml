@@ -1,0 +1,33 @@
+defaults:
+  - hydra: default
+  - logger: mlflow
+  - /data/datasets@data.train: patch_camelyon/train
+  - /data/datasets@data.val: patch_camelyon/val
+  - /data/datasets@data.test: patch_camelyon/test
+  - /model/backbone: ???
+  - _self_
+
+seed: ${random_seed:}
+mode: ???
+checkpoint: null
+
+trainer:
+  enable_checkpointing: True
+  max_epochs: 20
+  log_every_n_steps: 10
+  callbacks:
+    - _target_: lightning.pytorch.callbacks.ModelCheckpoint
+      save_top_k: 1
+      monitor: validation/loss
+      mode: min
+
+data:
+  batch_size: 512
+  num_workers: 4
+
+model: {}
+
+metadata:
+  experiment_name: Patch Camelyon
+  run_name: Patch Camelyon training
+  description: Training a model on the Patch Camelyon dataset

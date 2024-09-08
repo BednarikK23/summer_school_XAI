@@ -1,0 +1,2 @@
+_target_: patch_camelyon.modeling.backbone.resnet18
+weights: null

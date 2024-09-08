@@ -5,3 +5,16 @@ defaults:
 output_subdir: null
 run:
   dir: .
+
+class_example:
+  _target_: hydra_configs.task4.example.Model
+  name: unet
+  backbone:
+    _target_: hydra_configs.task4.example.Backbone
+    num_classes: 3
+
+function_example:
+  _target_: hydra_configs.task4.example.create_model
+  name: ${class_example.name}
+  num_classes: ${class_example.backbone.num_classes}
+

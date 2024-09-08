@@ -1,0 +1,12 @@
+{
+	"name": "Summer School",
+	"image": "registry.gitlab.ics.muni.cz:443/rationai/digital-pathology/libraries/mlkit:1.0.0",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.jupyter"
+			]
+		}
+	}
+}

@@ -1,0 +1,43 @@
+[project]
+name = "patch-camelyon"
+version = "0.1.0"
+authors = [{ name = "Matěj Pekár", email = "matejpekar@mail.muni.cz" }]
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = [
+    "torch>=2.4.0",
+    "lightning>=2.3.3",
+    "requests>=2.32.3",
+    "tqdm>=4.66.4",
+    "albumentations>=1.4.13",
+    "hydra-core>=1.3.2",
+    "torchvision>=0.19.0",
+    "torchmetrics>=1.4.1",
+    "h5py>=3.11.0",
+    "psutil>=6.0.0",
+    "pynvml>=11.5.3",
+    "torcheval>=0.0.7",
+    "rationai-mlkit @ git+https://gitlab.ics.muni.cz/rationai/digital-pathology/libraries/mlkit.git",
+]
+
+[tool.pdm.dev-dependencies]
+dev = ["mypy", "pre-commit", "ruff"]
+
+[tool.pdm.scripts]
+train = "python -m patch_camelyon.main mode=fit"
+validate = "python -m patch_camelyon.main mode=validate"
+test = "python -m patch_camelyon.main mode=test"
+predict = "python -m patch_camelyon.main mode=predict"
+l = { composite = ["lint", "format", "mypy"] }
+lint = "ruff check --fix"
+format = "ruff format"
+mypy = "mypy ."
+post_install = { composite = [
+    "pre-commit autoupdate",
+    "pre-commit install",
+    "pre-commit install --hook-type commit-msg",
+] }
+
+[tool.pdm]
+distribution = false

@@ -1,0 +1,11 @@
+# Define the configuration from TASK 1.1
+learning_rates: [1e-3, 1e-4, 1e-5]
+loss_weights:
+  dice: 1.0
+  ce: 0.9
+optimizers:
+  - name: sgd
+    learning_rate: 1e-4
+  - name: adam
+    learning_rate: 1e-3
+    decay: 1e-4

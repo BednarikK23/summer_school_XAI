@@ -1,0 +1,12 @@
+batch_size: 10
+
+data:
+  batches: ${batch_size}
+  val:
+    transforms:
+      - rotate
+      - flip
+      - normalize
+
+  test:
+    transforms: ${..val.transforms}

@@ -1,0 +1,5 @@
+checkpoint: my_checkpoint.ckpt
+
+trainer:
+  max_epochs: 2
+  logger: MLFlow

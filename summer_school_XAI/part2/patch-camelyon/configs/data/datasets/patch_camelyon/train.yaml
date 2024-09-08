@@ -1,0 +1,7 @@
+defaults:
+  - /data/transforms@transforms: train
+  - _self_
+
+_target_: patch_camelyon.data.datasets.PatchCamelyon
+path_x: /mnt/data/PatchCamelyon/camelyonpatch_level_2_split_train_x.npy
+path_y: /mnt/data/PatchCamelyon/camelyonpatch_level_2_split_train_y.npy
