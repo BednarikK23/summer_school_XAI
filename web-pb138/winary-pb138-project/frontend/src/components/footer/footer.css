@@ -1,0 +1,30 @@
+.footer {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    font-size: 1rem;
+    justify-content: center;
+    padding: 1rem 5rem;
+    bottom: 0;
+    position: relative;
+    gap: 5rem;
+}
+
+.footer__text {
+    margin: 0;
+}
+
+.icons {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.icons:hover {
+    color: #ddd;
+}

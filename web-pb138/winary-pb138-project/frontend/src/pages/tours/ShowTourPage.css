@@ -1,0 +1,25 @@
+.show-tour-page__participants {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.show-tour-page__participants h2 {
+    margin-bottom: 0;
+}
+
+.show-tour-page__participants-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: var(--spacing-ssm);
+}
+
+.show-tour-page__participants-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+

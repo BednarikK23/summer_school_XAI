@@ -1,0 +1,9 @@
+**/.env
+**/node_modules
+**/.vscode
+**/.idea
+**/dist
+out
+**/*.js
+package-lock.json
+prisma/migrations*

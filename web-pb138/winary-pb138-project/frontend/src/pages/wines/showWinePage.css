@@ -1,0 +1,121 @@
+.main-show-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-container {
+    background-color: var(--white-page);
+    border-radius: var(--border-radius-md);
+    min-width: var(--width-min);
+    max-width: calc(var(--width-max) + 10%);
+    box-shadow: var(--shadows);
+    margin: var(--spacing-md) 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show-container__footer,
+.show-content {
+    padding: var(--spacing-sm);
+    text-align: left;
+}
+.show-content__name {
+    color: var(--primary-color);
+    margin: 0 0 var(--spacing-sm) 0;
+}
+
+.show-content p {
+    font-size: 1em;
+    line-height: 1.2em;
+    color: #555;
+    margin: 0;
+}
+
+.show-image {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: cover;
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+}
+
+.show-container-footer__order,
+.show-container-footer__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.show-buttons,
+.show-container-footer__order {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+    margin-top: var(--spacing-sm);
+}
+
+.show-order__amount-input {
+    padding: var(--spacing-ssm) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: 1em;
+    max-width: 5rem;
+    text-align: center;
+    margin-left: 0.1rem;
+}
+
+.amount-input {
+    width: 50px;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#error-can-order {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    margin-top: 0;
+}
+
+@media (min-width: 500px) {
+    .show-image {
+        border-radius: var(--border-radius-md);
+        max-width: 95%;
+        max-height: 50vh;
+        margin: 2.5%;
+        box-sizing: border-box;
+        justify-self: center;
+    }
+}
+
+@media (min-width: 800px) {
+    .show-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .show-content {
+        align-self: baseline;
+        margin-top: var(--spacing-md);
+    }
+
+    .show-image {
+        border-radius: var(--border-radius-md);
+        margin: var(--spacing-md);
+        max-width: 95%;
+        max-height: 75vh;
+    }
+
+    .show-container-footer__order,
+    .show-container-footer__buttons {
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,12 @@
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: var(--spacing-ssm) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    width: fit-content;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+}

@@ -1,0 +1,76 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.form-wrapper {
+    align-self: center;
+    margin: var(--spacing-ssm)
+}
+
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white-page);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    overflow: scroll;
+    max-height: 75%;
+    border: 2px solid var(--primary-color);
+}
+
+.form-container__header {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.form-input-container__input--checkbox {
+    align-self: flex-start;
+}
+
+.form-input-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.form-btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: var(--spacing-sm);
+}
+
+.form-input-container__error {
+    font-size: 0.7rem;
+    color: var(--error-color);
+}
+
+.form-input-container__input {
+    padding: var(--spacing-ssm) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--primary-color);
+}
+

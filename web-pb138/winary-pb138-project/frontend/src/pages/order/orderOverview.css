@@ -1,0 +1,78 @@
+.order-overview-container {
+    background-color: var(--white-page);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadows);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 75%;
+}
+
+.order-overview-info {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.15rem solid var(--secondary-color);
+    padding: var(--spacing-md);
+    gap: var(--spacing-sm);
+}
+
+.order-overview-info:nth-last-child(2) {
+    border-bottom: none;
+}
+
+.label-data-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-data-container__span {
+    border: 0.15rem solid var(--secondary-color);
+    padding: var(--spacing-ssm) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    background-color: white;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: var(--spacing-ssm);
+}
+
+.info-photo-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.order-overview-product {
+    display: flex;
+    gap: var(--spacing-lg);
+    border: 0.15rem solid var(--secondary-color);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: var(--spacing-lg);
+}
+
+.order-overview-info__header {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.order-overview-product:hover {
+    background-color: var(--white-page);
+}
+
+.info-photo-container__photo {
+    background-image: url("../../assets/wine.jpg");
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--border-radius-sm);
+}

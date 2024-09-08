@@ -1,0 +1,36 @@
+.my-orders {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.my-orders__container {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-lg);
+    gap: var(--spacing-md);
+    margin: 0 250px;
+}
+
+.my-orders__search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.my-orders-content {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+
+@media (max-width: 800px) {
+    .my-orders__container {
+        margin: 0 auto;
+    }
+}

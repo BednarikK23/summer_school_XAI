@@ -1,0 +1,11 @@
+.admin-user-list__text {
+    flex: 3;
+}
+
+.admin-user-list__buttons {
+    flex: 1.5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}

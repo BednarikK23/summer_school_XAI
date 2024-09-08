@@ -1,0 +1,10 @@
+.home-page {
+    width: 100%;
+}
+
+.home-page__expandable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

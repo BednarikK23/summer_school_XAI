@@ -1,0 +1,19 @@
+relační databáze: postgres
+(cache: redis ??)
+
+
+Rozdělení projektu 
+
+/app 
+/api 
+/db
+/minio - object storage?
+
+
+
+
+
+
+
+
+

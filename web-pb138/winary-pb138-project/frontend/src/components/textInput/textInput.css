@@ -1,0 +1,18 @@
+.form-input-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.form-input-container__error {
+    font-size: 0.7rem;
+    color: var(--error-color);
+}
+
+.form-input-container__input {
+    padding: var(--spacing-ssm) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--primary-color);
+}

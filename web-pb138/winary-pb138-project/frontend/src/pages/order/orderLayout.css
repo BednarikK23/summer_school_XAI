@@ -1,0 +1,59 @@
+.order-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-content {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-md);
+}
+
+.order-buttons button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-ssm) var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 var(--spacing-sm);
+}
+
+.order-buttons button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.order-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-ssm) var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: var(--spacing-md);
+}
+
+.order-form button:hover {
+    background-color: var(--primary-hover-color);
+}

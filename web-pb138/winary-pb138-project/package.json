@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "dev": "concurrently \"docker start teamProjectDatabase\" \"npm run start:frontend\" \"npm run seed:backend && npm run start:backend\"",
+    "start:frontend": "cd frontend && npm run dev",
+    "start:backend": "cd backend && npm start",
+    "seed:backend": "cd backend && npm run db:seed",
+    "devInit": "docker start teamProjectDatabase && cd backend && npx prisma generate && npx prisma migrate dev --name meno && cd .. && npm run dev",
+    "prod": "docker start teamProjectDatabase && cd backend && npx prisma generate && npx prisma migrate dev --name meno && cd .. && npm run dev"
+  },
+  "dependencies": {
+    "@quixo3/prisma-session-store": "^3.1.13",
+    "cookie-parser": "^1.4.6",
+    "express-session": "^1.18.0",
+    "passport-cookie": "^1.0.9",
+    "prisma": "^5.12.1"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "concurrently": "^8.2.2"
+  }
+}

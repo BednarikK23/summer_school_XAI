@@ -1,0 +1,28 @@
+.nav-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.nav-link {
+    cursor: pointer;
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: var(--spacing-ssm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 650px) {
+    .nav-links {
+        flex-wrap: wrap;
+        gap: var(--spacing-ssm);
+    }
+
+    .nav-link {
+        padding: var(--spacing-ssm) var(--spacing-ssm);
+    }
+}

@@ -1,0 +1,49 @@
+.expandable-text-field {
+    margin: 20px 0;
+    padding: var(--spacing-sm);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+    max-width: 80%;
+    min-width: 65%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.expandable-text-field h2 {
+    color: #7B323B;
+}
+
+.expandable-text-field p {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    white-space: pre-wrap;
+}
+
+.expandable-text-field p.collapsed {
+    max-height: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.expandable-text-field p.expanded {
+    max-height: 500px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.expandable-text-field button {
+    background-color: #7B323B;
+    color: var(--secondary-color);
+    padding: var(--spacing-ssm) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    width: fit-content;
+}
+
+.expandable-text-field button:hover {
+    background-color: #5a252d;
+}

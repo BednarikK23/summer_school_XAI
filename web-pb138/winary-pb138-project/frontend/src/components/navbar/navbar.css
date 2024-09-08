@@ -1,0 +1,103 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm);
+    position: sticky;
+    background-color: var(--primary-color);
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-active {
+    background-color: var(--accent-color)!important;
+}
+
+.links,
+.links-shown {
+    color: var(--secondary-color);
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    min-width: var(--width-max);
+    max-width: 100%;
+    justify-content: space-between;
+}
+
+.links a {
+    padding: var(--spacing-ssm) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+}
+
+.links a:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.change.bar1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.change.bar2 {
+    opacity: 0;
+}
+
+.change.bar3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: var(--spacing-sm);
+        max-height: 5vh;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+        background-color: var(--primary-color);
+        border-radius: var(--border-radius-md);
+        padding: var(--spacing-ssm);
+        max-width: 100vw;
+    }
+
+    .links-shown {
+        width: 30vw;
+        border-radius: var(--border-radius-md);
+        border: 0.15rem solid black;
+        cursor: pointer;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+    }
+    .links-shown a {
+        margin: 5px;
+        padding: var(--spacing-ssm);
+        border-radius: var(--border-radius-sm);
+    }
+}
+
+
+.navbar__basket-image {
+    margin-left: 2rem;
+}

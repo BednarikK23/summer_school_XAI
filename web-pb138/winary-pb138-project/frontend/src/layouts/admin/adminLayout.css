@@ -1,0 +1,77 @@
+.admin-layout {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-layout h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+
+.admin-navbar {
+    background-color: var(--primary-hover-color);
+    padding: var(--spacing-md);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.admin-navbar .nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.admin-content {
+    flex: 1;
+    padding: var(--spacing-lg);
+    background-color: var(--secondary-color);
+}
+
+.admin-section {
+    background-color: white;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--spacing-lg);
+}
+
+.admin-section h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.admin-section form,
+.admin-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.admin-section .form-label {
+    color: var(--primary-color);
+}
+
+.admin-section .form-control {
+    padding: var(--spacing-ssm);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius-sm);
+}
+
+.admin-section .btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-ssm) var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-section .btn:hover {
+    background-color: var(--primary-hover-color);
+}

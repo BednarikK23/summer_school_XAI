@@ -1,0 +1,211 @@
+```
+@startuml
+
+
+
+enum ShippingCompanies {
+  DHL
+  Packeta
+  CeskaPosta
+}
+
+enum PaymentMethods {
+  ApplaPay
+  GooglePay
+  Stripe
+  GoPay
+  BitCoin
+}
+
+enum PaymentStates {
+  Cancled
+  Pending
+  Success
+}
+
+enum VineColors {
+  Rose
+  White
+  Red
+}
+
+enum VineTypes {
+  Suche
+  PoloSuche
+  PoloSladke
+  Sladke
+  NevimJake
+}
+
+enum Alergens {
+  Celery 
+  CerealsGluten
+  Crustaceans
+  Eggs 
+  Fish 
+  Lupin 
+  Milk 
+  Molluscs
+  Mustard 
+  Peanuts 
+  Sesame 
+  Soybeans 
+  SulphurDioxide_Sulphites
+  TreeNuts
+}
+
+
+entity User {
+  * id: <<uuid>>
+  ---
+  * name: string
+  * sex: bool
+  * password: string
+  * birthDate: dateTime
+  ---
+  * contact: Contact
+  ratings: Rating[]
+}
+
+entity UserVinary {
+  * id: <<uuid>>
+}
+
+entity Vinary {
+  * id: <<uuid>>
+  ---
+  * name: string
+  * description: string
+  about: string
+  * openingHours: string
+  ---
+  * contact: Contact
+  vines: VineryVine[]
+  * owner: User[]
+  ratings: Rating[]
+  suveniers: Suvenier[]
+}
+
+entity VinaryVine {
+  * id: <<uuid>>
+}
+
+entity Vine {
+  * id: <<uuid>>
+  ---
+  * name: string
+  * description: string
+  * price: int
+  * color: Enum
+  * type: Enum
+  * locality: string
+  calories: int
+  * alergens: [Enum]
+  ---
+  ratings: Rating[]
+}
+
+entity Rating {
+  * id: <<uuid>>
+  ---
+  * description: string
+  * stars: int
+}
+
+entity Phone {
+  * id: <<uuid>>
+  ---
+  * number: string
+}
+
+entity Email {
+  * id: <<uuid>>
+  ---
+  * mail: string
+}
+
+entity Address {
+  * id: <<uuid>>
+  ---
+  * street: string
+  houseNumber: int
+  * city: string
+  region: string
+  * nation: string
+  * postalCode: string
+}
+
+entity Contact {
+  * id: <<uuid>>
+  ---
+  ---
+  *primaryAdress: Address
+  secondaryAddress: Address
+  * mails: Email[]
+  phones: Phone[]
+}
+
+entity Product {
+  * id: <<uuid>>
+  ---
+  * name: string
+  * description: string
+  * price: int
+}
+
+entity Order {
+  * id: <<uuid>>
+  ---
+  * shippingCompany: Enum
+  * date: DateTime
+  ---
+  vines: Vine[]
+  products: Product[]
+  * payments: Payment[]
+  * user: User
+  * contact: Contact
+}
+
+entity Payment {
+  * id: <<uuid>>
+  ---
+  * amount: int
+  * method: Enum
+  * state_: Enum 
+}
+
+ShippingCompanies..Order
+Vine..Alergens
+Payment..PaymentStates
+Payment..PaymentMethods
+Vine..VineColors
+Vine..VineTypes
+
+User||..o{Order
+Order||..o{Vine
+Order||..o{Product
+Order||..|{Payment
+Order||..o{Contact
+Order||..||User
+
+User||..||Contact
+Vinary||..||Contact
+
+
+Contact ||..o{ Phone
+Contact ||..|{ Email
+Contact ||..|{ Address
+
+User ||..o{ Rating
+Vine ||..o{ Rating
+Vinary ||..o{ Rating
+
+Vine ||..o{ VinaryVine
+Vinary ||..|{ VinaryVine
+Vinary ||..o{ Product
+
+User ||..o{ UserVinary
+Vinary ||..|{ UserVinary
+  
+
+```

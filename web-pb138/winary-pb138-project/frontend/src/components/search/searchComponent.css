@@ -1,0 +1,61 @@
+.search-component {
+    width: 100%;
+}
+
+.gift-form__search {
+    padding-left: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    border: var(--primary-color) 2px solid;
+    align-self: center;
+    height: var(--input-height);
+
+}
+
+.filter-toggle-button {
+    border: 2px solid var(--primary-color);
+    background-color: #f9f9f9;
+    padding: .4rem;
+    border-radius: 10px;
+    font-size: .9rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+.filter-toggle-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.filters {
+  border: .15rem solid var(--primary-color);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-sm);
+  background-color: var(--white-page);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    box-shadow: var(--shadows);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-ssm);
+    flex: 1;
+}
+
+.filter-group input,
+.filter-group select {
+    max-width: 100%;
+    border: .1rem solid var(--primary-color);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-ssm);
+}
+
+.filter-group select:focus-visible {
+    outline: none;
+}

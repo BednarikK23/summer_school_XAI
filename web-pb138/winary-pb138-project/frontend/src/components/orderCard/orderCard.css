@@ -1,0 +1,78 @@
+.my-orders-list-item__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 0;
+    margin: 0;
+}
+
+.order-card__header {
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    color: var(--primary-color);
+}
+
+.order-card-product-container {
+    margin: 0;
+    padding: 0;
+    padding-bottom: var(--spacing-sm);
+    max-height: 148px;
+    overflow: scroll;
+}
+
+.order-card {
+    border: 0.15rem solid var(--primary-color);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-md);
+    background-color: var(--white-page);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.order-card:hover {
+    background-color: #f0f0f0;
+}
+
+.order-card-info {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.15rem solid var(--secondary-color);
+}
+
+.order-card-info:nth-last-child(2) {
+    border-bottom: none;
+}
+
+.order-card-info__span {
+    padding: var(--spacing-ssm);
+}
+
+.order-card-info__label {
+    font-weight: bold;
+}
+
+.order-card-product-content {
+    display: flex;
+    border: 0.15rem solid var(--secondary-color);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    background-color: white;
+    gap: var(--spacing-sm);
+    overflow: scroll;
+}
+
+.order-card-product-content:hover {
+    background-color: var(--secondary-color);
+}
+
+.order-card-product-content__image {
+    background-image: url("../../assets/wine.jpg");
+    height: 60px;
+    min-width: 60px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--border-radius-sm);
+}

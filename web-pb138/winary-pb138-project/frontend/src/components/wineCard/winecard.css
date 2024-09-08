@@ -1,0 +1,39 @@
+.wine-item p {
+    margin: 0;
+}
+
+.wine-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-ssm);
+    align-items: center;
+    background-color: #f9f9f9;
+    border: .15rem solid var(--primary-color);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-sm);
+    box-shadow: var(--shadows);
+}
+
+.wine-item:hover {
+    background-color: #f0f0f0;
+}
+
+.wine-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wine-name {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.wine-image {
+    width: 70%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 4px;
+}

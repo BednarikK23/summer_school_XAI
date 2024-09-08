@@ -1,0 +1,100 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  isAdmin   Boolean  @default(false)
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  vinery    Vinary[]
+}
+
+model Wine {
+  id                        String      @id @default(uuid())
+  name                      String
+  type                      String      @default("UNSPECIFIED")
+  price                     Int         @default(69)
+  winery                    Vinary      @relation(fields: [wineryId], references: [id])
+  wineryId                  String
+  createdAt                 DateTime    @default(now())
+  order                     OrderItem[]
+  attribution               String?
+  description               String?
+  year                      String
+  alcoholPercentage         Float?
+  sugarGramsPerLiter        Float?
+  glycerolGramsPerLiter     Float?
+  totalAcidityGramsPerLiter Float?
+  pH                        Float?
+}
+
+model Vinary {
+  id          String   @id @default(uuid())
+  name        String
+  owner       User     @relation(fields: [ownerId], references: [id])
+  ownerId     String   @unique
+  createdAt   DateTime @default(now())
+  openingTime String   @default("00:00")
+  closingTime String   @default("00:00")
+  location    String   @default("Jihomoravský kraj")
+  orders      Order[]
+  wines       Wine[]
+  tours       Tour[]
+  description String?
+  address     String?
+  ico         String
+  phone       String
+  email       String
+}
+
+model Order {
+  id             String      @id @default(uuid())
+  orderDate      DateTime    @default(now())
+  totalAmount    Float
+  status         String
+  customerName   String
+  contactPhone   String
+  contactEmail   String
+  pickupDateFrom String?
+  pickupDateTo   String?
+  vinary         Vinary      @relation(fields: [vinaryId], references: [id])
+  vinaryId       String
+  createdAt      DateTime    @default(now())
+  items          OrderItem[]
+}
+
+model OrderItem {
+  id        String @id @default(uuid())
+  order     Order  @relation(fields: [orderId], references: [id])
+  orderId   String
+  wine      Wine   @relation(fields: [wineId], references: [id])
+  wineId    String
+  quantity  Int
+  unitPrice Float
+}
+
+model Session {
+  id        String   @id
+  sid       String   @unique
+  data      String
+  expiresAt DateTime
+}
+
+model Tour {
+  id           String   @id @default(uuid())
+  name         String
+  location     String
+  address      String
+  time         String
+  status       String
+  description  String
+  participants Vinary[]
+}

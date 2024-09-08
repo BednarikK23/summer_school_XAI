@@ -1,0 +1,78 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-lg);
+}
+
+.loginForm {
+    background-color: var(--secondary-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+    width: 100%;
+}
+
+.loginForm label {
+    display: block;
+    margin-bottom: var(--spacing-ssm);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.loginForm input {
+    width: 100%;
+    padding: var(--spacing-ssm);
+    margin-bottom: var(--spacing-sm);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius-sm);
+    text-align: center;
+}
+
+.loginForm input::placeholder {
+    text-align: center;
+}
+
+.loginForm span {
+    color: var(--primary-color);
+    display: block;
+    text-align: center;
+}
+
+.loginForm button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-ssm) var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%;
+    text-align: center;
+    margin-top: var(--spacing-sm);
+}
+
+.loginForm button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.loginForm div:last-child {
+    margin-top: var(--spacing-sm);
+    color: var(--primary-color);
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: center;
+}
+
+.loginForm div:last-child:hover {
+    color: var(--accent-color);
+}

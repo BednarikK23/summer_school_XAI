@@ -1,0 +1,29 @@
+.tours-main-page {
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 75rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tours-container {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.tours-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.tours-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

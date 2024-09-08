@@ -1,0 +1,27 @@
+.tour-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: .15rem solid var(--primary-color);
+    border-radius: var(--border-radius-md);
+    background-color: var(--white-page);
+    box-shadow: var(--shadows);
+    gap: var(--spacing-ssm);
+    padding: var(--spacing-sm);
+}
+
+.tour-card:hover {
+    background-color: #f0f0f0;
+}
+
+.tour-image {
+    width: 80%;
+    height: auto;
+    border-radius: var(--border-radius-sm);
+}
+
+.tour-name {
+    font-size: 1.2em;
+    color: var(--primary-color);
+}

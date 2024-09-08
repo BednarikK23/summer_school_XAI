@@ -1,0 +1,13 @@
+.admin-navbar {
+    background-color: var(--primary-hover-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-sm) var(--spacing-ssm)!important;
+}
+
+.admin-navbar-container {
+    max-width: 95%;
+    min-width: var(--width-min);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

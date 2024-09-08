@@ -1,0 +1,33 @@
+.my-winery-page {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-page);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-lg);
+    min-width: 35%;
+    border-radius: var(--border-radius-md);
+}
+
+.my-winery-page-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.my-winery-page__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+}
+
+.my-winery-page__buttons > * {
+    margin: 0;
+}
+
+.container__title {
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+    font-size: var(--title-md);
+    text-align: center;
+}
