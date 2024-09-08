@@ -1,1 +1,0 @@
-docker run --detach -p 6969:5432 --name teamProjectDatabase -e POSTGRES_PASSWORD=password -e POSTGRES_USER=user -e POSTGRES_DB=database postgres:latest
