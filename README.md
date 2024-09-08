@@ -1,1 +1,1 @@
-# summer_school_XAI
+# Machine Learning
